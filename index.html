@@ -12,11 +12,11 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
         }
 
         header {
-            background-color: #007bff;
-            padding: 20px;
+            padding: 5px;
             text-align: center;
             color: #fff;
         }
@@ -24,15 +24,19 @@
         section {
             max-width: 800px;
             margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
+            padding: 25px;
+            background-color: #ffffff76;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
+            text-align: justify;
         }
 
-        h1, h2, p {
+        h1, h2, h3, p {
             margin-bottom: 10px;
         }
+        h2, h3 {
+            text-align: center;
+        }	
 
         img {
             max-width: 100%;
@@ -42,7 +46,6 @@
         }
 
         .footer-tabla{
-            background-color: #dde1e6;
             color: #fff;
             text-align: center;
             padding: 10px auto;
@@ -66,8 +69,8 @@
 
         .content-links table {
             border-spacing: 2vh;
-            border-radius: 15%;
-            background-color: #121212;
+            border-radius: 1%;
+            background-color: #12121290;
             text-align: left;
             margin: 0 auto;
         }
@@ -75,7 +78,6 @@
         .content-me {
             color: #fff;
             text-decoration: none;
-            background-color: rgb(52, 52, 215);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -83,28 +85,47 @@
             margin-block-end: 0%;       
             padding: auto;     
         }
-
+        img {
+            display: block;
+            margin: 20px auto;
+            padding: 0 auto;
+            border-radius: 10%;
+            width: 60%;
+            align-items: center;
+            position: static;
+        }
         .content-me img {
-            
             width: 20px;
             height: 20px;
-            margin: -3px 5px;
+            margin: -18px -25px;
             border-radius: 60%;
         }
         .content-me a {
+            margin: 2vh 0;
+            padding-top: 3.5vh;
             margin-top: 2vh;
-            padding: 0%;
-            background-color: rgb(183, 183, 210);
-                    color: #fff;
-                    text-decoration: none;
-        }
-        .footer-content {
             color: #fff;
-            text-align: center;
+            text-decoration: none;
+        }
+        
+        .footer-content {
+            background-color: rgba(89, 0, 255, 0.21);
+            color: #fff;
+            text-align: justify;
             padding: 3px auto;
             position: sticky;
             bottom: 0;
             width: 100%;
+        }
+        .queEs div{
+            text-align: center;
+        }
+        .queES p, li{
+            align-items: left;
+            text-align: left; 
+        }	
+        ol{
+            list-style-type: none; 
         }
     </style>
 </head>
@@ -112,20 +133,34 @@
 <body>
 
     <header>
-        <h1>Inteligencia Artificial 101</h1>
+        <h1>La Inteligencia Artificial 101</h1>
         <p>Descubre el fascinante mundo de la inteligencia artificial.</p>
+        
     </header>
-
+    <img src="imagenes\procesoIA.jpg" alt="Brazo robotico jugando Ajedrez">
     <footer class="footer-tabla">
         <div class="content-links">
             <table>
                 <tr>
                     <td>
-                        <ol style="list-style-type: none; padding: 0; text-align: left;">
-                            <li><a href="#redes-neuronales">• Redes Neuronales</a></li>
-                            <li><a href="#aprendizaje">• Aprendizaje Supervisado y No Supervisado</a></li>
-                            <li><a href="#algoritmos">• Algoritmos Avanzados</a></li>
-                            <li><a href="#aplicaciones">• Aplicaciones Prácticas</a></li>
+                        <ol>
+                            <h2>Indice de contenido</h2>
+                            <li><a href="#laIA">• La Inteligencia Artificial</a>
+                                <ol>
+                                    <li><a href="#IADebil">• Inteligencia Artificial Debil</a></li>
+                                    <li><a href="#IAFuerte">• Inteligencia Artificial Fuerte</a></li>
+                                    <li><a href="#IADevsIaFu">• IA Debil <i>vs</i> IA Fuerte</a></li>
+                                </ol>
+                                <li><a href="#SubcamposIA">• Subcampos de la IA</a>
+                                    <ol>
+                                        <li><a href="#redes-neuronales">• Redes Neuronales</a></li>
+                                        <li><a href="#aprendizaje">• Aprendizaje Supervisado y No Supervisado</a></li>
+                                        <li><a href="#algoritmos">• Algoritmos Avanzados</a></li>
+                                        <li><a href="#aplicaciones">• Aplicaciones Prácticas</a></li>
+                                    </ol>
+                                </li>
+                            </li>
+                            
                         </ol>
                     </td>
                 </tr>
@@ -133,14 +168,131 @@
         </div>
     </footer>
 
-    <section>
-        <h2 id="redes-neuronales">Redes Neuronales</h2>
-        <img src="neural_network.jpg" alt="Redes Neuronales">
-        <p>Las redes neuronales son la base de la inteligencia artificial. Se inspiran en la estructura del cerebro humano y consisten en capas de nodos interconectados, cada uno realizando operaciones para procesar información.</p>
-        <p>Estas capas incluyen la capa de entrada, capas ocultas y la capa de salida. Durante el entrenamiento, el modelo ajusta sus pesos y bias para mejorar la precisión en la tarea específica para la cual se está entrenando.</p>
-        <p>Las redes neuronales pueden ser utilizadas para problemas como clasificación, regresión, reconocimiento de patrones y más.</p>
+    <section class="queEs">
+        <h2 id="#laIA">La inteligencia Artificial</h2>
+        <p>La inteligencia artificial (IA) es una ciencia la cual busca crear maquinas que sean capaces de realizar tareas en donde se requiera utilizar la inteligencia humana como el razonamiento, aprendizaje o creatividad. Podemos decir que la inteligencia artificial tiene como objetivo emular la inteligencia humana con el fin de recompilar y analizar la informacion que se le propone  para así llegar a una conclusión o solución final.</p>
+        <p>La inteligencia artificial se puede clasificar en dos tipos: <br></p>
+        
+        <div>
+            <section >
+                
+                <h3 id="IADebil">Inteligencia Artificial Debil</h3>
+                <p>La inteligencia artificial debil, tambien conocida como <b>Inteligencia Artificial Estrecha (ANI)</b> nos ayuda en tareas especificas como atencion al cliente, procesamiento de datos, automacización de tareas en la oficina, etc.</p>
+                <img src="imagenes\ajedrezIA.jpg" alt="Brazo robotico jugando Ajedrez">
+                <p>A pesar de que la inteligencia artificial debil sea muy usada en nuestro día a día, esta presenta muchas limitaciones: <br>
+                <li>
+                    <b>No puede aprender por si sola:</b>  Necesita de un humano para que le enseñe constantemento, lo cual significa que necesita de muchos algoritmos y datos de entrenamiento para poder realizar una tarea. <br> Como ya se suponia, la calidad de respuesta de la misma dependera de la calidad de los datos con lo cual se haya entrenado.
+                </li>
+                <br>
+                <li>
+                    <b>No puede realizar tareas sencillas:</b> La inteligencia artificial debil no puede realizar tareas complejas en donde se requiera un pensamiento critico o creativo o juicioso.
+                </li>
+                <br>
+                <li>
+                    <b>No puede autocorregirse:</b> La inteligencia artificial debil no puede corregir sus errores por si sola, necesita de un humano para que la corrija volviendola a entrenar.
+                </li>
+                <br>
+                <li>
+                    <b>Aislamiento:</b> La inteligencia artificial debil no puede realizar tareas que no se hayan entrnado.
+                </li>
+            </section>
+            <section>
+                <h3 id="IAFuerte">Inteligencia Artificial fuerte</h3>
+                <p>
+                    La inteligencia artificial fuerte, tambien conocida como <b>Inteligencia Artificial General (AGI)</b> tiene como objetivo de emular la inteligencia humana, es decir, que pueda pensar, razonar, aprender, autocorregirse, etc. <br> 
+                </p>
+                <p>
+                    Este tipo de inteligencia artificial aprende al igual que un niño, es decir, se va desarrollando segun la información y el entrenamiento autodidacta que esta tenga, asi es como mejoran constantemente
+                </p>
+                <img src="imagenes\IAFuerte.png" alt="Brazo robotico jugando Ajedrez">
+                <p>
+                    A diferencia de la inteligencia artificial debil, la inteligencia artificial fuerte no tiene limitaciones, es decir, puede realizar cualquier tarea que se le asigne, ya sea tareas sencillas o complejas, puede aprender por si sola, puede autocorregirse y sobre todo tiene un pensamiento mas lógico.
+                </p>
+                <p>
+                    A pesar de que la inteligencia artificial fuerte sea muy avanzada, esta presenta una gran desventaja: <br>
+                    <li>
+                        <b>La ética:</b> La inteligencia artificial fuerte no tiene un sentido de ética, es decir, no puede distinguir entre el bien y el mal, por lo cual puede ser muy peligrosa para la sociedad.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Los datos:</b> La inteligencia artificial fuerte necesita de muchos datos para poder aprender, por lo cual se necesita de una gran cantidad de datos para poder entrenarla, esto puede ser muy desafiante a la hora de conseguir los recursos para poder entrenarla.
+                    </li>
+                </p>
+            </section>
+            <section>
+                <h3 id="#IADevsIaFu">IA Debil <i>vs</i> IA Fuerte</h3>
+                <p>
+                    La inteligencia arficial debil solamente puede realizar una tarea en específico como responder preguntas o jugar pero no ambas al mismo tiempo, mientras que la inteligencia artificial fuerte puede realizar varias funciones al mismo tiempo que aprende para eventualmente resolver problemas mas complejos por si sola.
+                    <br><br>
+                    La inteligencia artificial debil requiere de ayuda humana para definirse y proporcionar los datos los cuales le ayudaran a aprender y asi ser precisa en las tareas que realiza, contrario a la inteligencia artificial fuerte la cual puede aprender por si sola, aunque si bien el humano puede intervenir, no es necesario ya que esta conn el tiempo crea una conciensia similar a la humana en lugar de simplemente simularla.
+                </p>
+                <p>
+                    La inteligencia artificial debil y la inteligencia artificial fuerte son muy diferentes entre si, pero ambas tienen un objetivo en comun: <br>
+                    <li>
+                        Facilitar los procesos de la vida cotidiana y mejorar la calidad en vida de las personas en general.
+                    </li>
+                </p>
+            </section>
+        </div>
     </section>
-
+    <section>
+        <h2 id="#SubcamposIA">Subcampos de la Inteligencia Artificial para su creación</h2>
+        <p></p>
+        <section>
+            <h2 id="redes-neuronales">Redes Neuronales</h2>
+            <p>Las redes neuronales, también conocidas como redes neuronales artificiales (ANN) o redes neuronales simuladas (SNN), estas son un subconjunto de <a href="#machineLearnig"><b>Machine Learning</b></a> y constituyen el eje de los algoritmos de <a href="#deepLearnig"><b>Deep learning</b></a> y son la base de la inteligencia artificial. Se inspiran en la estructura del cerebro humano y consisten en capas de nodos interconectados, cada uno realizando operaciones para procesar información.</p>
+            <img src="imagenes\cerebroRed.png" alt="Redes Neuronales">
+            <p>Las redes neuronales artificiales (ANN) están formadas por capas de nodos, que contienen una capa de entrada, una o varias capas ocultas y una capa de salida. Cada nodo, o neurona artificial, se conecta a otro y tiene un peso y un umbral asociados. Si la salida de un nodo individual está por encima del valor de umbral especificado, dicho nodo se activa y envía datos a la siguiente capa de la red. De lo contrario, no se pasan datos a la siguiente capa de la red.</p>
+            <img src="imagenes\deep.png" alt="deep learnig">
+            <p>Las redes neuronales se basan en entrenar datos para aprender y mejorar su precisión con el tiempo. No obstante, una vez que estos algoritmos de aprendizaje se ajustan de manera precisa, constituyen potentes herramientas de informática, lo que nos permite clasificar y agrupar los datos a gran velocidad. Un ejemplo de esto son los algoritmos de busqueda en Google</p>
+            
+            <section>
+                <h3>¿Como Funcionan?</h3>
+                <p>Piense en cada nodo individual como su propio modelo de regresión lineal, formado por datos de entrada, ponderaciones, un sesgo (o umbral) y una salida. La fórmula sería similar a la siguiente:</p>
+                <p>∑wixi + sesgo = w1x1 + w2x2 + w3x3 + sesgo
+                    <br><br>
+                    salida = f(x) = 1 if ∑w1x1 + b>= 0; 0 if ∑w1x1 + b < 0</p><br>
+                    <p>Las redes neuronales en su mayoria son de propagacion hacia delante en donde se tiene:</p>
+                    <li>
+                        <b>Capa de Entrada:</b> Se determina la capa inicial que recibe las entradas del sistema.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Asignación de Ponderaciones:</b> Se asignan ponderaciones a las conexiones entre nodos, determinando la importancia de cada variable de entrada.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Operación de Ponderación y Suma:</b> Cada entrada se multiplica por su ponderación respectiva, y los resultados se suman para obtener la entrada neta.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Función de Activación:</b> La salida neta se pasa a través de una función de activación, que determina si el nodo se activa o no.
+                    </li>
+                    <br>
+                    <li>
+                        <b>Umbral de Activación: </b>Si la salida supera un umbral específico, se activa el nodo, y la salida se transmite a la siguiente capa de la red
+                    </li>
+                    <br>
+                    <li>
+                        <b>Propagación hacia Adelante: </b>Este proceso se repite capa por capa, donde la salida de un nodo se convierte en la entrada del siguiente nodo.
+                    </li>
+                    <p>Si bien el que se propagen hacia delante define que fluyen en una sola direccion, es decir de entrada hacia la salida, tambien es posible entrenar un modelo mediante retropopagación, es decir, desde la salida hacia la entrada. <br><br> Esto permite calcular y atribuir el error asociado a cada neurona, de forma que podemos ajustar y adecuar los parámetros de los modelos según corresponda.</p>
+                    <img src="imagenes\retropropagacion.png" alt="Retroporpagacion">
+                </section>
+                Fuente: IBM
+        </section>
+        <section>
+            <h2 id="deepLearnig">Deep Learning</h2>
+        </section>
+        <section>
+            <h2 id="machineLearnig">Machine Learning</h2>
+            <p>El Machine Learning es un subcampo de la inteligencia artificial que se centra en el desarrollo de algoritmos que permiten a las computadoras aprender a partir de datos. Estos algoritmos pueden aprender de forma supervisada o no supervisada.</p>
+            <img src="imagenes\machine-learning-3537808_640.png" alt="Machine Learning">
+            <p>El aprendizaje supervisado implica proporcionar algoritmos con datos etiquetados, mientras que el aprendizaje no supervisado busca patrones en datos no etiquetados.</p>
+            <p>j</p>
+        </section>
+        
+    </section>
     <section>
         <h2 id="aprendizaje">Aprendizaje Supervisado y No Supervisado</h2>
         <p>Existen diferentes enfoques para entrenar modelos de inteligencia artificial. El aprendizaje supervisado implica proporcionar algoritmos con datos etiquetados, mientras que el aprendizaje no supervisado busca patrones en datos no etiquetados.</p>
@@ -158,7 +310,7 @@
 
     <footer class="footer-content">
         <div class="content-me">
-            <a href="sobreMi.html" target="_blank"><img src="imagenes\kk.jpg">Sobre Mi</a>
+            <a href="sobreMi.html" target="_top"><img src="imagenes\kk.jpg">Sobre Mi</a>
         </div>
         
     </footer>

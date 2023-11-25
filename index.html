@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             color: #333;
-            background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+            background: linear-gradient(90deg, rgb(124, 121, 172) 0%, rgb(116, 116, 185) 35%, rgb(95, 159, 172) 100%);
         }
 
         header {
@@ -20,9 +20,18 @@
             text-align: center;
             color: #fff;
         }
+        img {
+            display: block;
+            margin: 20px auto;
+            padding: 0 auto;
+            border-radius: 10%;
+            width: 60vh;
+            align-items: center;
+            position: static;
+        }
 
         section {
-            max-width: 800px;
+            max-width: 90%;
             margin: 20px auto;
             padding: 25px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -34,9 +43,7 @@
 
         }
         .sect2{
-
             background-color: #ffffff09;
-
         }
         h1, h2, h3, p {
             margin-bottom: 10px;
@@ -45,14 +52,10 @@
             text-align: center;
         }	
 
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
+        
 
         .footer-tabla{
+            
             color: #fff;
             text-align: center;
             padding: 10px auto;
@@ -62,6 +65,7 @@
         }
         
         .content-links {
+            
             flex-direction: column;
             align-items: center;
             margin-top: 8px;
@@ -75,9 +79,11 @@
         }
 
         .content-links table {
+            box-shadow: inset 1px 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 90%;
             border-spacing: 2vh;
-            border-radius: 1%;
             background-color: #12121290;
+            border-radius: 1%;
             text-align: left;
             margin: 0 auto;
         }
@@ -92,15 +98,7 @@
             margin-block-end: 0%;       
             padding: auto;     
         }
-        img {
-            display: block;
-            margin: 20px auto;
-            padding: 0 auto;
-            border-radius: 10%;
-            width: 60%;
-            align-items: center;
-            position: static;
-        }
+        
         .content-me img {
             width: 20px;
             height: 20px;
@@ -134,13 +132,17 @@
         ol{
             list-style-type: none; 
         }
+        .cabecera img{
+            height: 50vh;
+            width: 60vh;
+        }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>La Inteligencia Artificial </h1>
+    <header class="cabecera">
+        <h1>La IA (Artificial Inteligent)</h1>
         <img src="imagenes\procesoiA.jpg" alt="Brazo robotico jugando Ajedrez">
     </header>
     <footer class="footer-tabla">
@@ -169,10 +171,14 @@
                                                 <li><a href="#comoFunciona">• Como Funciona el Machine Learnig</a></li>
                                             </ol>
                                         </li>
-
-                                        <li><a href="#aprendizaje">• Aprendizaje Supervisado y No Supervisado</a></li>
-                                        <li><a href="#algoritmos">• Algoritmos Avanzados</a></li>
-                                        <li><a href="#aplicaciones">• Aplicaciones Prácticas</a></li>
+                                        <li><a href="#deepLearnig">• Deep Learnig</a>
+                                            <ol>
+                                                <li>
+                                                <a href="#comoFuncionaDeppLearning">• Como Funciona el Deep Learnig</a></li>
+                                                </li>
+                                            </ol>
+                                        </li>
+                                        <li><a href="#masInformacion">• Mas información</a></li>
                                     </ol>
                                 </li>
                             </li>
@@ -309,11 +315,11 @@
                             <img src="imagenes\propagacionHaciaDelante.png" alt="">
                         </li><br>
                         <li>
-                            <b>Redes neuronales recurrentes (RNN):</b> Las redes <b>RNN</b> son redes neuronales que tienen conexiones entre nodos que forman un ciclo, lo que permite que la información se propague en ambas direcciones. Esto permite que las redes neuronales recurrentes tengan memoria, lo que las hace ideales para el procesamiento de datos secuenciales.
+                            <b id="redesRecurrentes">Redes neuronales recurrentes (RNN):</b> Las redes <b>RNN</b> son redes neuronales que tienen conexiones entre nodos que forman un ciclo, lo que permite que la información se propague en ambas direcciones. Esto permite que las redes neuronales recurrentes tengan memoria, lo que las hace ideales para el procesamiento de datos secuenciales.
                             <img src="imagenes\recurrent_neural_network-f.png" alt="">
                         </li><br>
                         <li>
-                            <b>Redes neuronales convolucionales (CNN):</b> Las redes <b>CNN</b> son redes neuronales que se utilizan principalmente para el procesamiento de imágenes. Estas redes se componen de capas convolucionales, capas de agrupación y capas totalmente conectadas. Las capas convolucionales se utilizan para extraer características de las imágenes, las capas de agrupación se utilizan para reducir la dimensionalidad de las imágenes y las capas totalmente conectadas se utilizan para clasificar las imágenes.
+                            <b id="redesConvolucionales">Redes neuronales convolucionales (CNN):</b> Las redes <b>CNN</b> son redes neuronales que se utilizan principalmente para el procesamiento de imágenes. Estas redes se componen de capas convolucionales, capas de agrupación y capas totalmente conectadas. Las capas convolucionales se utilizan para extraer características de las imágenes, las capas de agrupación se utilizan para reducir la dimensionalidad de las imágenes y las capas totalmente conectadas se utilizan para clasificar las imágenes.
                             <img src="imagenes\convolutional_neural_network-f.png" alt="">
                         </li><br>
                         <li>
@@ -331,11 +337,12 @@
         </section>
         <section  class="sect2">
             <h2 id="machineLearnig">Machine Learning</h2>
-            <p>El <b>Machine Learning</b> o aprendizaje automatico es una rama de la inteligencia artificial que se centra en el desarrollo de algoritmos que permiten a las computadoras aprender por si solas a partir de datos y algoritmos. Estos intentan imitar la forma en como los humanos aprenden.</p>
+            <p>El <b>Machine Learning</b> o aprendizaje automatico es una rama de la inteligencia artificial que se centra en el desarrollo de algoritmos que permiten a las computadoras aprender por si solas a partir de datos y algoritmos  csc. Estos intentan imitar la forma en como los humanos aprenden.</p>
             </p>
             <img src="imagenes\artificial-intelligence-7328583_640.jpg" alt="Machine Learning">
             <section class="sect2">
                 <h3 id="comoFunciona">¿Como Funciona?</h3>
+                <img src="imagenes\machineL.png" alt="">
                 <p>
                     <li><b>Decisión: </b> En general la mayoria de los algoritmos del aprendizaje automatico se usan para predecir o clasificar datos. Estos datos pueden estar o no etiquetados.</li>
                     <br>
@@ -368,22 +375,47 @@
         </section>
         <section class="sect2">
             <h2 id="deepLearnig">Deep Learning</h2>
-            <p>ddd</p>
-            
+            <p>El depp learnig tiene como objetivo tratar de imitar el cerebro humano, aunque lejos de de ello, este nos permite agrupar, clasificar y hacer operaciones con una gran precisión.</p>
+            <img src="imagenes\deepLearning.jpg" alt="Deep learning"><br>
+            <p>Podemos decir que el <b>Deep Learnig</b> es un subconjunto del <a href="#machineLearnig">Machine Learnig</a> la cual tiene redes neuronales con multiples capas, lo que les permite "aprender" con los datos que se le proporcionen a esta, obteniendo así un resultado muy preciso.
+            <br><br> El <b>Deep Learnig</b> tiene la ventaja de que puede procesar datos no estructurados (No contienen estructuras identificables), como texto, imagenes, voz, etc. Lo que hace es identificar las características, eliminando así el requerimiento del aprendizaje supervisado.
+            </p>
+            <br>
+            <section>
+                <h2 id="comoFuncionaDeppLearning">¿Como Funciona?</h2>
+                <img src="imagenes\deepL.png" alt="deepLearning">
+                <p>El <b>Deep Learning</b> consta de varias capas de nodos interconectados uno sobre otro para refinar y optimizar la predicción o categorización. A esta progresión de datos la podemos denominar como propagacion hacia delante en donde: <br><li> <b>Capa de entrada:</b> Esta sera en donde nuestro modelo ingiere los datos de procesamiento </li><li><b>Capa de salida:</b> Sera por donde se realizara la prediccion o clasificación final</li></p>
+                <p>También existe la propagación inversa. ed donde  esta nos ayuda calcular los errores en las predicciones y luego ajustar las ponderaciones y sesgos de la función moviendose hacia atrás a traves de sus capas con la finalidad de entrenar el modelo. Gracias a esto nuestro algoritmo gana precisión con el tiempo<br></p>
+                <p>Este fue un concepto simple sobre como funcionan, aunque en la realidad los modelos de <b>Deep Learning</b> son increíblemente complejos de los cuales tambien se derivan diferentes tipos de redes neuronales para abordar problemas mas grandes. Como por ejemplo: <br><li><a href="#redesConvolucionales"><b>Las redes neuronales convolucionales(CNN)</a></li><br><li> <a href="#redesRecurrentes">Las redes neuronales recurrentes</a></b></li><br>Hablados previamente en la sección de <a href="#redes-neuronales">Redes Neuronales</a></p>
+                Si bien el <b>Deep Learning</b> es muy poderoso, este tiene sus limitaciones, ya que este consume una gran cantidad de potencia computacional, específicamente las unidades de procesamiento gráfico (GPU), los cuales son ideales porque pueden manejar un gran volumen de cálculos en varios núcleos con gran cantidad de memoria disponible, sin embargo gestionar localmente estos recursos puede ser muy costoso, por lo cual se recomienda usar servicios en la nube para poder entrenar los modelos. 
+            </section>
+            Fuente: IBM
         </section>
         
     </section>
     
 
-    <section class="sect1">
-        <h2 id="algoritmos">Algoritmos Avanzados</h2>
-        <p>Explora algoritmos avanzados como Random Forest, Support Vector Machines y algoritmos de agrupamiento. Estos permiten resolver problemas más complejos y diversificados.</p>
-    </section>
 
     <section class="sect1">
-        <h2 id="aplicaciones">Aplicaciones Prácticas</h2>
-        <p>Descubre cómo la inteligencia artificial se utiliza en el mundo real, desde asistentes virtuales hasta diagnósticos médicos y vehículos autónomos. Explora casos de estudio y proyectos innovadores.</p>
-    </section>
+        <h2 id="masInformacion">Mas información</h2>
+        <p>Si llegaste hasta aquí significa que tienes un gran interes sobre el tema, con los conceptos básicos planteados en esta página la idea de como funcionan y como trabajan están hechas, solo queda profundizar y aprender mas sobre el tema de tu interés. <br>Te ayudare con unos cursos gratuitos que al parecer son muy buenos, resalto que estos no estan categorizados.</p>
+        <p>
+            <li><a href="https://www.geeksforgeeks.org/machine-learning/">Machine Learning Tutorial</a></li>
+            <li><a href="https://www.geeksforgeeks.org/deep-learning-tutorial/">Deep Learning Tutorial</a></li>
+            <li><a href="https://www.geeksforgeeks.org/natural-language-processing-nlp-tutorial/">Natural Language Processing (NLP) Tutorial</a></li>
+            <li><a href="https://scikit-learn.org/stable/index.html">Scikit Learn</a></li>
+            <li><a href="https://www.coursera.org/learn/neural-networks-deep-learning">Neural Networks and Deep Learning</a></li>
+            <li><a href="https://www.coursera.org/learn/deep-neural-network">Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization</a></li>
+            <li><a href="https://www.coursera.org/learn/convolutional-neural-networks">Convolutional Neural Networks</a></li>
+            <li><a href="https://www.coursera.org/learn/nlp-sequence-models">Sequence Models</a></li>
+            <li><a href="https://www.coursera.org/learn/generative-adversarial-networks">Generative Adversarial Networks (GANs)</a></li>
+            <li><a href="https://www.edx.org/search?tab=course&skills.skill=Artificial+Intelligence&referredFrom=edxNavigation&page=1">Todos los cursos de IA en edx.org</a></li>
+            <br>
+            
+            Para aprender aun más puedes investigar sobre <a href="https://spark.apache.org/docs/latest/api/python/index.html">PySpark</a> la cual es una libreria de python la cual nos optimiza las operaciones.
+            <br><br>Si quieres entrenar a tu red neuronal con una gran cantidad de datos puedes usar <a href="https://www.tensorflow.org/">TensorFlow</a> la cual es una libreria de python que nos ayuda a entrenar a nuestra red neuronal.
+        </section>
+
 
     <footer class="footer-content">
         <div class="content-me">

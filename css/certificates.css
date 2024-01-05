@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    height: 100%;
+    
+}
+h1{
+    color: white;
+    text-align: center;
+    text-decoration:double;
+    
+    
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    border: 1.5px solid rgb(192, 102, 7);
+    margin: 5px;
+    box-sizing: border-box; /* Asegura que el borde esté incluido en el ancho total */
+}
